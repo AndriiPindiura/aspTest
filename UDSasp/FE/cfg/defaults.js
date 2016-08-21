@@ -20,7 +20,7 @@ function getDefaultModules() {
       },
       {
         test: /\.scss/,
-        loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded'
+				loader: 'style-loader!css-loader?modules&importLoaders=2&localIdentName=[local]___[hash:base64:5]&minimize!autoprefixer-loader?browsers=last 2 version!postcss-loader!sass-loader?outputStyle=expanded'
       },
       {
         test: /\.less/,

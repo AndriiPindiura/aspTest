@@ -5,12 +5,13 @@ using System.Web;
 
 namespace UDSasp.Models
 {
-    public class PeoplesModel
+    public class UserModel
     {
-        public People[] peoples { get; set; }
+        public string username { get; set; }
+        public UserInfo[] users { get; set; }
     }
 
-    public class People
+    public class UserInfo
     {
         public string guid { get; set; }
         public string picture { get; set; }
@@ -23,5 +24,11 @@ namespace UDSasp.Models
         public string about { get; set; }
         public string registered { get; set; }
         public string[] tags { get; set; }
+    }
+
+    public class UserDetails
+    {
+        public string username { get; set; }
+        public UserInfo user { get; set; }
     }
 }
