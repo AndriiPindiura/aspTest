@@ -60,6 +60,7 @@ class App extends React.Component {
 		const content = this.state.selectedUser
 			? <User
 					user={this.state.selectedUser}
+					back={this.clearUser}
 				/> :
 				<Main
 					userCallback={this.selectUser}

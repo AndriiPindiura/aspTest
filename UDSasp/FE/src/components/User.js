@@ -8,6 +8,7 @@ class UserComponent extends React.Component {
 		const { user } = this.props.user;
 		return (
 			<section style={{ padding: '10px' }}>
+				<a onClick={this.props.back} style={{ textDecoration: 'underline', cursor: 'pointer' }}>back</a>
 				<h1>User name, {this.props.user.username}</h1>
 				<div style={{ display: 'flex', alignItems: 'center', margin: '10px auto' }}>
 					<img src={user.picture} style={{
@@ -36,6 +37,7 @@ class UserComponent extends React.Component {
 
 UserComponent.propTypes = {
 	user: React.PropTypes.object.isRequired,
+	back: React.PropTypes.func.isRequired,
 }
 
 export default UserComponent;
